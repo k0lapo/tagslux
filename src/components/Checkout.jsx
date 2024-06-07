@@ -79,21 +79,18 @@ const Checkout = () => {
             />
         </div>
         <h3 className="text-2xl font-bold mb-4">Order Summary</h3>
-        {cartItems.map((item) => {
-            const itemTotal = parseFloat(item.price.replace(/,/g, '')) * item.quantity;
-            return (
-                <div key={`${item.id}-${item.selectedSize}-${item.selectedColor?.name}`} className="flex items-center justify-between mb-4 p-4 border border-gray-200">
-                    <div>
-                        <h4 className="text-xl font-semibold">{item.name}</h4>
-                        <p className="text-gray-700 text-sm">Color: {item.selectedColor?.name || 'N/A'}, Size: {item.selectedSize}</p>
-                        <p className="text-gray-700">&#8358; {item.price} x {item.quantity}</p>
-                    </div>
-                    <div>
-                        <p className="text-xl font-semibold">&#8358; {itemTotal.toLocaleString()}</p>
-                    </div>
-                </div>
-            );
-        })}
+        {cartItems.map((item) => (
+            <div key={`${item.id}-${item.selectedSize}-${item.selectedColor?.name}`} className="flex items-center justify-between mb-4 p-4 border border-gray-200">
+            <div>
+                <h4 className="text-xl font-semibold">{item.name}</h4>
+                <p className="text-gray-700 text-sm">Color: {item.selectedColor?.name || 'N/A'}, Size: {item.selectedSize}</p>
+                <p className="text-gray-700">&#8358; {item.price} x {item.quantity}</p>
+            </div>
+            <div>
+                <p className="text-xl font-semibold">&#8358; {(item.price * item.quantity).toFixed(2)}</p>
+            </div>
+            </div>
+        ))}
         <div className="flex justify-between items-center mb-6">
              <h3 className="text-2xl font-bold">Total: &#8358; {formattedTotalAmount}</h3>
         </div>

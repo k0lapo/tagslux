@@ -8,10 +8,10 @@ const products = [
       backImage: '/hope back.png',
       sizes: ['L', 'XL', 'XXL'],
       colors: [
-        { name: 'Pink', hex: '#E600BB', image: '/hope front.png' },
-        { name: 'Coffee Brown', hex: '#533316', image: '/hope front.png' },
-        { name: 'Black', hex: '#000000', image: '/hope front.png' },
-        { name: 'White', hex: '#fffff', image: '/hope front.png' },
+        { name: 'Pink', hex: '#E600BB', image: '/deeppink.png' },
+        { name: 'Coffee Brown', hex: '#533316', image: '/coffeebrown.png' },
+        { name: 'Black', hex: '#000000', image: '/black front.png' },
+        { name: 'White', hex: '#fffff', image: '/white.png' },
     ],
     },
     {
@@ -34,7 +34,7 @@ const products = [
       backImage: '/zephyrus back.png',
       sizes: ['L', 'XL', 'XXL'],
       colors: [
-        { name: 'Black', hex: '#000000', image: '/zephyrus front.png' },
+        { name: 'Black', hex: '#000000', image: '/zeph-black front.png' },
         { name: 'Wash Grey', hex: '#5E6168', image: '/zephyrus back.png' },
       ],
     },
