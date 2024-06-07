@@ -87,7 +87,7 @@ const Checkout = () => {
                 <p className="text-gray-700">&#8358; {item.price} x {item.quantity}</p>
             </div>
             <div>
-                <p className="text-xl font-semibold">&#8358; {(item.price * item.quantity).toFixed(2)}</p>
+                <p className="text-xl font-semibold">&#8358; {(parseFloat(item.price.replace(/,/g, '')) * item.quantity).toLocaleString()}</p>
             </div>
             </div>
         ))}
