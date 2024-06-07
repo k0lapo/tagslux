@@ -1,0 +1,17 @@
+.front-image {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .back-image {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .relative:hover .front-image {
+    opacity: 0;
+  }
+  
+  .relative:hover .back-image {
+    opacity: 1;
+  }
+  
