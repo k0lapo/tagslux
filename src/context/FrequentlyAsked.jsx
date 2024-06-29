@@ -22,7 +22,7 @@ const FrequentlyAsked = () => {
     },
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept major credit cards, PayPal, and other secure payment methods.'
+      answer: 'We accept major credit cards, mobile transfers, and other secure payment methods.'
     },
     {
       question: 'How can I contact customer service?',

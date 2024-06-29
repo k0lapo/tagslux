@@ -13,16 +13,16 @@ export const CartProvider = ({ children }) => {
           item.selectedSize === product.selectedSize &&
           item.selectedColor?.name === product.selectedColor?.name
       );
-
+  
       if (existingItemIndex !== -1) {
         const updatedItems = [...prevItems];
         updatedItems[existingItemIndex] = {
           ...updatedItems[existingItemIndex],
-          quantity: updatedItems[existingItemIndex].quantity + 1
+          quantity: updatedItems[existingItemIndex].quantity + product.quantity
         };
         return updatedItems;
       } else {
-        return [...prevItems, { ...product, quantity: 1 }];
+        return [...prevItems, { ...product }];
       }
     });
   };
@@ -52,9 +52,13 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const getTotalQuantity = () => {
+    return cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  };
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart, updateCartItemQuantity }}
+      value={{ cartItems, addToCart, removeFromCart, clearCart, updateCartItemQuantity, getTotalQuantity }}
     >
       {children}
     </CartContext.Provider>

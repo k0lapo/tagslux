@@ -1,4 +1,6 @@
 // src/App.jsx
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import ProductCard from './components/ProductCard';

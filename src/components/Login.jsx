@@ -18,7 +18,6 @@ const Login = () => {
   };
 
   const handleLogin = () => {
-    // Mock login logic
     const user = {
       name: formData.username,
       email: 'user@example.com',
@@ -29,20 +28,36 @@ const Login = () => {
     navigate('/user-profile');
   };
 
-  const handleSignUp = () => {
-    // Mock sign-up logic
+  const handleSignUp = async () => {
     const user = {
       name: formData.username,
       email: formData.email,
       address: '123 Main St',
       phone: '123-456-7890'
     };
-    updateUserProfile(user);
-    navigate('/user-profile');
+
+    try {
+      const response = await fetch('/api/send-to-google-sheet', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      });
+
+      if (response.ok) {
+        updateUserProfile(user);
+        navigate('/user-profile');
+      } else {
+        console.error('Failed to send user data to Google Sheet');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex mt-8 justify-center">
       <div className="w-full max-w-md">
         <h2 className="text-3xl font-bold text-center mb-6">{isSignUp ? 'Sign Up' : 'Login'}</h2>
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
