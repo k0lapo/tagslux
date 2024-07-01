@@ -1,13 +1,43 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const SubscriptionModal = ({ onClose }) => {
   const [email, setEmail] = useState('');
+  const [status, setStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    const isSubscribed = localStorage.getItem('isSubscribed');
+    if (isSubscribed) {
+      onClose();
+    }
+  }, [onClose]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the email submission (e.g., send to an API)
-    alert(`Subscribed with email: ${email}`);
-    onClose();
+
+    const formData = new FormData();
+    formData.append('email', email);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mqazkeko', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setStatus('Subscribed successfully!');
+        localStorage.setItem('isSubscribed', 'true');
+        setTimeout(() => {
+          onClose();
+        }, 2000); // Closes the modal after 2 seconds
+      } else {
+        setStatus('Failed to subscribe.');
+      }
+    } catch (error) {
+      setStatus('There was an error submitting your subscription.');
+    }
   };
 
   return (
@@ -31,6 +61,11 @@ const SubscriptionModal = ({ onClose }) => {
             Subscribe
           </button>
         </form>
+        {status && (
+          <p className={`mt-4 ${status === 'Subscribed successfully!' ? 'text-green-600' : 'text-red-600'}`}>
+            {status}
+          </p>
+        )}
         <button
           onClick={onClose}
           className="mt-4 text-gray-700 text-bold hover:text-black"

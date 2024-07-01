@@ -38,9 +38,8 @@ const Navbar = () => {
               </span>
             )}
           </Link>
-          <Link to="/" className="text-gray-800 font-bold">
-            <FaUser />
-          </Link>
+          
+            <FaUser />       
         </div>
         <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="text-black focus:outline-none">
@@ -70,9 +69,9 @@ const Navbar = () => {
                 </span>
               )}
             </Link>
-            <Link to="/" onClick={closeMenu} className="block py-2 text-black text-xl hover:text-gray-700 font-bold">
-              <FaUser className="inline" />
-            </Link>
+            
+            <FaUser className="inline" />
+            
           </div>
         </div>
         {/* Social media icons section for mobile */}
