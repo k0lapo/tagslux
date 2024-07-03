@@ -16,16 +16,16 @@ const products = [
       },
       {
         name: 'White',
-        hex: '#fffff',
+        hex: '#ffffff',
         image: '/white.png',
         backImage: '/whiteback.png',
       },
-      {
-        name: 'Purple',
-        hex: '#DA70D6',
-        image: '/deeppink.png',
-        backImage: '/deeppinkback.png',
-      },
+      // {
+      //   name: 'Purple',
+      //   hex: '#DA70D6',
+      //   image: '/deeppink.png',
+      //   backImage: '/deeppinkback.png',
+      // },
       // {
       //   name: 'Coffee Brown',
       //   hex: '#533316',

@@ -8,6 +8,10 @@ const ProductDetail = () => {
   const product = products.find((p) => p.id === parseInt(id));
   const { addToCart } = useCart();
 
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
   const [quantity, setQuantity] = useState(1);
