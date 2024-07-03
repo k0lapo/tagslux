@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext';
 const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
+
   const { addToCart } = useCart();
 
   if (!product) {
@@ -86,7 +87,7 @@ const ProductDetail = () => {
                   className={`p-2 w-12 h-12 rounded border ${
                     selectedSize === size
                       ? 'bg-black text-white'
-                      : 'bg-white border-gray-300'
+                      : 'bg-white border-black'
                   } transition-colors duration-200 hover:bg-gray-200`}
                   onClick={() => setSelectedSize(size)}
                 >
@@ -123,7 +124,6 @@ const ProductDetail = () => {
           >
             Add to Cart
           </button>
-
 
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-2">About This Design</h2>
