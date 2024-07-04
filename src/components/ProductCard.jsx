@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="max-w-lg rounded overflow-hidden shadow-lg m-6">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 inline-block">
       <Link to={`/product/${product.id}`}>
         <div className="relative w-full h-80">
           <img
@@ -40,16 +40,17 @@ const ProductCard = ({ product }) => {
         <div className="font-bold text-xl mb-2">{product.name}</div>
         <p className="text-gray-700 text-base">&#8358; {product.price}</p>
       </div>
-      <div className="px-9 py-4 mb-5">
+      <div className="px-6 py-4 text-center"> {/* Use text-center class to center align content */}
         <Link to={`/product/${product.id}`}>
           <button
-          
-            className="bg-green-700 hover:bg-black mx-16 text-white font-bold py-2 px-4 rounded"
+            className="bg-green-700 hover:bg-black text-white font-bold py-2 px-4 rounded"
+            style={{ width: '60%' }} // Set inline style for button width
           >
             Select Options
           </button>
         </Link>
       </div>
+
     </div>
   );
 };

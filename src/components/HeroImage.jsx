@@ -4,7 +4,7 @@ const HeroImage = () => {
   return (
     <div className="relative w-full ">
       <img
-        src="/lands.JPG"
+        src="/group.jpg"
         alt="Landscape"
         className="w-full left-0 h-full object-cover inset-0"
         style={{ minWidth: '100%' }} // Ensure the image covers the full width

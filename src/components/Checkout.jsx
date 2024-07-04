@@ -8,6 +8,7 @@ const Checkout = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [address, setAddress] = useState('');
   const [paymentMessage, setPaymentMessage] = useState('');
 
   useEffect(() => {
@@ -62,6 +63,11 @@ const Checkout = () => {
             variable_name: 'quantity',
             value: cartItems.map(item => item.quantity).join(', '), // Concatenate all quantities
           },
+          {
+            display_name: 'Dispatch Address',
+            variable_name: 'address',
+            value: formattedTotalAmount,
+          }
         ],
       },
       callback: (response) => {
@@ -115,6 +121,16 @@ const Checkout = () => {
               className="w-full px-3 py-2 border border-gray-300 rounded-md"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="text-sm font-medium text-gray-900 mb-1">Adress</label>
+            <input
+              type="text"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
               required
             />
           </div>

@@ -11,7 +11,13 @@ const ShippingPolicy = () => {
         <section className="mb-8">
           <h3 className="text-2xl font-semibold mb-4 text-black">Domestic Shipping</h3>
           <p className="mb-4 text-gray-600">
-            We offer free standard shipping on all domestic orders over $50. Orders under $50 will incur a flat rate shipping fee of $5. Standard shipping typically takes 3-5 business days.
+            We offer free standard shipping on all orders within Lagos. Standard shipping typically takes 3-5 business days.
+          </p>
+        </section>
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4 text-black">Inter-State Dispatch</h3>
+          <p className="mb-4 text-gray-600">
+            We offer dispatch across the states in Nigeria. Dispatch fee depends on your preference and weight of the product, we use private dispatch companies. Standard shipping typically takes 5-7 business days.
           </p>
         </section>
         <section className="mb-8">
@@ -29,7 +35,7 @@ const ShippingPolicy = () => {
         <section className="mb-8">
           <h3 className="text-2xl font-semibold mb-4 text-black">Shipping Restrictions</h3>
           <p className="mb-4 text-gray-600">
-            We currently do not ship to P.O. Boxes or APO/FPO addresses. Additionally, there may be certain locations we are unable to ship to. If you are located in such an area, we will contact you to discuss alternative arrangements.
+            Additionally, there may be certain locations we are unable to ship to. If you are located in such an area, we will contact you to discuss alternative arrangements.
           </p>
         </section>
         <section className="mb-8">

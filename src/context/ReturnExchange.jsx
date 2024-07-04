@@ -16,7 +16,7 @@ const ReturnExchange = () => {
             <ul className="list-disc list-inside ml-4">
               <li>The item must be unused, unworn, unwashed, and in the same condition that you received it.</li>
               <li>The item must have the original tags attached.</li>
-              <li>The item must be returned within 30 days of purchase.</li>
+              <li>The item must be returned within 7 days of purchase.</li>
               <li>Proof of purchase is required (e.g., order number, receipt).</li>
             </ul>
           </p>

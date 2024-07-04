@@ -68,7 +68,7 @@ const Navbar = () => {
                 </span>
               )}
             </Link>
-            <FaUser className="inline" />
+            <FaUser className="inline mt-4" />
           </div>
         </div>
         {/* Social media icons section for mobile */}

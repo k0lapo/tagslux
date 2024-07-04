@@ -55,17 +55,17 @@ const Footer = () => {
               <li>
                 <Link to="/return-exchange" className="hover:underline">Return & Exchange</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/terms-conditions" className="hover:underline">Terms & Conditions</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold mb-4">Customer Service</h3>
             <ul>
-              <li>
+              {/* <li>
                 <Link to="/payment-options" className="hover:underline">Payment Options</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/contact-us" className="hover:underline">Contact Us</Link>
               </li>
