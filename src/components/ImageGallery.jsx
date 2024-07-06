@@ -4,6 +4,7 @@ const ImageGallery = () => {
   const placeholderImages = [
     '/ric.jpg',
     '/vick.jpg',
+    
   ];
 
   return (
