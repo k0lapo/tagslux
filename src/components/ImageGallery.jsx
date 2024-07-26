@@ -1,15 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const ImageGallery = () => {
   const placeholderImages = [
-    '/ric.jpg',
-    '/vick.jpg',
-    
+    '/ric.png',
+    '/vick.png',
   ];
 
   return (
     <div>
-      
       <div className="container mx-auto px-4 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5">
           {placeholderImages.map((image, index) => (

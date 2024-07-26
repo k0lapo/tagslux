@@ -6,7 +6,7 @@ const products = [
     price: '50,000',
     image: '/black front.png',
     backImage: '/black back.png',
-    sizes: ['L', 'XL', 'XXL'],
+    sizes: ['XL', '2XL', '3XL'],
     colors: [
       {
         name: 'Black',
@@ -42,7 +42,7 @@ const products = [
     name: 'Chavelle',
     price: '50,000',
     image: '/Chavelle black.png',
-    sizes: ['L', 'XL', 'XXL'],
+    sizes: ['XL', '2XL', '3XL'],
     colors: [
       {
         name: 'White',
@@ -73,7 +73,7 @@ const products = [
     price: '50,000',
     image: '/zeph-black front.png',
     backImage: '/zeph-black back.png',
-    sizes: ['L', 'XL', 'XXL'],
+    sizes: ['XL', '2XL', '3XL'],
     colors: [
       {
         name: 'Black',
@@ -98,7 +98,7 @@ const products = [
   //   price: '50,000',
   //   image: '/nocturnal black front.png',
   //   backImage: '/nocturnal black back.png',
-  //   sizes: ['L', 'XL', 'XXL'],
+  //   sizes: ['XL', '2XL', '3XL'],
   //   colors: [
   //     {
   //       name: 'Black',
@@ -129,7 +129,7 @@ const products = [
   //   price: '50,000',
   //   image: '/pic-black front.png',
   //   backImage: '/pic-black back.png',
-  //   sizes: ['L', 'XL', 'XXL'],
+  //   sizes: ['XL', '2XL', '3XL'],
   //   colors: [
   //     {
   //       name: 'Black',
