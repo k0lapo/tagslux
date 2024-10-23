@@ -1,35 +1,68 @@
 import { useState, useEffect } from 'react';
 import Product from './Product';
-import products from '../data/products';
 import SingleVideo from './ImageSlider';
 import SubscriptionModal from './SubscriptionModal';
-// import ReviewSlider from './ReviewSlider';
 import ImageGallery from './ImageGallery';
 import HeroImage from './HeroImage';
+import LoadingSkeleton from './LoadingSkeleton'; // Import the LoadingSkeleton
 
 const Home = () => {
-  const displayedProducts = products.slice(0, 5);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Fetch products from an API
   useEffect(() => {
     // Show the modal when the component mounts
     setIsModalOpen(true);
+
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/data"); // Replace with your API endpoint
+        if (!response.ok) {
+          throw new Error('Failed to fetch products');
+        }
+        const data = await response.json();
+        setProducts(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
   }, []);
+
+  // Show an error message if there was an error fetching the data
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  // Display only the first 5 products
+  const displayedProducts = products.slice(0, 5);
 
   return (
     <div className='bg-gray-100'>
       {isModalOpen && <SubscriptionModal onClose={() => setIsModalOpen(false)} />}
       <SingleVideo />
-      {/* Add the ImageGallery component here */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center">
-          {displayedProducts.map(product => (
-            <Product key={product.id} product={product} />
-          ))}
+          {loading ? (
+            // Display loading skeletons for the products
+            Array.from({ length: 5 }).map((_, index) => (
+              <LoadingSkeleton key={index} />
+            ))
+          ) : (
+            // Render the actual products
+            displayedProducts.map(product => (
+              <Product key={product.id} product={product} />
+            ))
+          )}
         </div>
-        <HeroImage/>
-        <ImageGallery /> 
-        {/* <ReviewSlider /> */}
+        <HeroImage />
+        <ImageGallery />
       </div>
     </div>
   );

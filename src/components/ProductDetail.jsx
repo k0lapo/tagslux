@@ -1,22 +1,63 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import products from '../data/products';
 import { useCart } from '../context/CartContext';
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const product = products.find((p) => p.id === parseInt(id));
-
   const { addToCart } = useCart();
 
+  // State variables for product data, loading, and error handling
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [isFrontImage, setIsFrontImage] = useState(true);
+
+  // Fetch all products and find the specific one by ID
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/data'); // Fetch all products
+        if (!response.ok) {
+          throw new Error('Failed to fetch products');
+        }
+        const data = await response.json();
+
+        // Find the product by ID
+        const foundProduct = data.find((p) => p.id === parseInt(id));
+        if (!foundProduct) {
+          throw new Error('Product not found');
+        }
+
+        setProduct(foundProduct);
+        setSelectedColor(foundProduct.colors[0]); // Set default color
+        setSelectedSize(foundProduct.sizes[0]); // Set default size
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, [id]);
+
+  // Handle loading state
+  if (loading) {
+    return <div>Loading product...</div>;
+  }
+
+  // Handle error state
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  // If the product is not found, return a message
   if (!product) {
     return <div>Product not found</div>;
   }
-
-  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
-  const [quantity, setQuantity] = useState(1);
-  const [isFrontImage, setIsFrontImage] = useState(true);
 
   const increaseQuantity = () => setQuantity(quantity + 1);
   const decreaseQuantity = () => {
@@ -64,9 +105,7 @@ const ProductDetail = () => {
                 <button
                   key={color.name}
                   className={`w-10 h-10 rounded-full border-2 ${
-                    selectedColor.name === color.name
-                      ? 'border-black'
-                      : 'border-gray-300'
+                    selectedColor.name === color.name ? 'border-black' : 'border-gray-300'
                   }`}
                   onClick={() => {
                     setSelectedColor(color);
@@ -85,9 +124,7 @@ const ProductDetail = () => {
                 <button
                   key={size}
                   className={`p-2 w-12 h-12 rounded border ${
-                    selectedSize === size
-                      ? 'bg-black text-white'
-                      : 'bg-white border-black'
+                    selectedSize === size ? 'bg-black text-white' : 'bg-white border-black'
                   } transition-colors duration-200 hover:bg-gray-200`}
                   onClick={() => setSelectedSize(size)}
                 >
@@ -115,14 +152,19 @@ const ProductDetail = () => {
               </button>
             </div>
           </div>
-
           <button
-            className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
-            onClick={() =>
-              addToCart({ ...product, selectedColor, selectedSize, quantity })
-            }
+             className={`${
+              product.inventory == 0
+                ? "bg-gray-400 text-white cursor-not-allowed" // Sold out style
+                : "bg-green-500 hover:bg-green-600 text-white"
+            } font-bold py-3 px-6 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105`}
+             onClick={() =>
+               addToCart({ ...product, selectedColor, selectedSize, quantity })
+             }
+            disabled={product.inventory == 0}
           >
-            Add to Cart
+            {product.inventory > 0 ? 'Add to Cart' : 'Sold Out'}
+
           </button>
 
           <div className="mt-8">
