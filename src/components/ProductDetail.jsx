@@ -19,7 +19,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:3000/data'); // Fetch all products
+        const response = await fetch('https://tagslux-backend.vercel.app/?vercelToolbarCode=byItbl2fmwZtl-d'); // Fetch all products
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }

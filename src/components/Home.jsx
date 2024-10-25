@@ -19,7 +19,7 @@ const Home = () => {
 
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/data"); // Replace with your API endpoint
+        const response = await fetch("https://tagslux-backend.vercel.app/?vercelToolbarCode=byItbl2fmwZtl-d"); // Replace with your API endpoint
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }
