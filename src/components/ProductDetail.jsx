@@ -33,6 +33,7 @@ const ProductDetail = () => {
 
         setProduct(foundProduct);
         setSelectedColor(foundProduct.colors[0]); // Set default color
+        // console.log(foundProduct.colors[0])
         setSelectedSize(foundProduct.sizes[0]); // Set default size
       } catch (err) {
         setError(err.message);
@@ -154,16 +155,17 @@ const ProductDetail = () => {
           </div>
           <button
              className={`${
-              product.inventory == 0
+              selectedColor.inventory == 0
                 ? "bg-gray-400 text-white cursor-not-allowed" // Sold out style
                 : "bg-green-500 hover:bg-green-600 text-white"
             } font-bold py-3 px-6 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105`}
              onClick={() =>
                addToCart({ ...product, selectedColor, selectedSize, quantity })
              }
-            disabled={product.inventory == 0}
+            // disabled={product.inventory == 0}
+            disabled={selectedColor.inventory == 0}
           >
-            {product.inventory > 0 ? 'Add to Cart' : 'Sold Out'}
+            {selectedColor.inventory > 0 ? 'Add to Cart' : 'Sold Out'}
 
           </button>
 
