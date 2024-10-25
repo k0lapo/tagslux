@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
-  
+
 
   if (!product) {
     return <div>Product not found</div>; // Handle case where product is not found
@@ -33,12 +33,17 @@ const Product = ({ product }) => {
       </Link>
       <Link to={`/product/${product.id}`}>
         <div className="px-6 bg-white py-4 mx-2">
-          <button
-            className="bg-gray-800 hover:bg-black text-white font-bold py-2 px-4 rounded"
-            disabled={product.inventory <= 0}
-          >
-            {product.inventory > 0 ? 'Select Options' : 'Sold Out'}
-          </button>
+        <button
+  className={`${
+    product.inventory <= 0
+      ? "bg-gray-400 cursor-not-allowed" // Sold out style
+      : "bg-gray-800 hover:bg-black"
+  } text-white font-bold py-2 px-4 rounded`}
+  disabled={product.inventory <= 0} // Disable button if sold out
+>
+  {product.inventory > 0 ? 'Select Options' : 'Sold Out'}
+</button>
+
         </div>
       </Link>
     </div>
