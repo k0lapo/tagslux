@@ -1,0 +1,301 @@
+const shirts = [
+    {
+      "id": 1,
+      "name": "Hope ;",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "XL",
+      "image": "/black front.png",
+      "backImage": "/black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 1,
+      "name": "Hope ;",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "2XL",
+      "image": "/black front.png",
+      "backImage": "/black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 1,
+      "name": "Hope ;",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "3XL",
+      "image": "/black front.png",
+      "backImage": "/black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 1,
+      "name": "Hope ;",
+      "price": 50000,
+      "color": "White",
+      "hex": "#ffffff",
+      "size": "XL",
+      "image": "/white.png",
+      "backImage": "/whiteback.png",
+      "inventory": 10
+    },
+    {
+      "id": 1,
+      "name": "Hope ;",
+      "price": 50000,
+      "color": "White",
+      "hex": "#ffffff",
+      "size": "2XL",
+      "image": "/white.png",
+      "backImage": "/whiteback.png",
+      "inventory": 10
+    },
+    {
+      "id": 1,
+      "name": "Hope ;",
+      "price": 50000,
+      "color": "White",
+      "hex": "#ffffff",
+      "size": "3XL",
+      "image": "/white.png",
+      "backImage": "/whiteback.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "White",
+      "hex": "#ffffff",
+      "size": "XL",
+      "image": "/Chavelle white.png",
+      "backImage": "/Chavelle white.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "White",
+      "hex": "#ffffff",
+      "size": "2XL",
+      "image": "/Chavelle white.png",
+      "backImage": "/Chavelle white.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "White",
+      "hex": "#ffffff",
+      "size": "3XL",
+      "image": "/Chavelle white.png",
+      "backImage": "/Chavelle white.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "XL",
+      "image": "/Chavelle black.png",
+      "backImage": "/Chavelle black.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "2XL",
+      "image": "/Chavelle black.png",
+      "backImage": "/Chavelle black.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "3XL",
+      "image": "/Chavelle black.png",
+      "backImage": "/Chavelle black.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "Purple",
+      "hex": "#DA70D6",
+      "size": "XL",
+      "image": "/Chavelle black.png",
+      "backImage": "/Chavelle black.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "Purple",
+      "hex": "#DA70D6",
+      "size": "2XL",
+      "image": "/Chavelle black.png",
+      "backImage": "/Chavelle black.png",
+      "inventory": 10
+    },
+    {
+      "id": 2,
+      "name": "Chavelle",
+      "price": 50000,
+      "color": "Purple",
+      "hex": "#DA70D6",
+      "size": "3XL",
+      "image": "/Chavelle black.png",
+      "backImage": "/Chavelle black.png",
+      "inventory": 10
+    },
+    {
+      "id": 3,
+      "name": "Zephyrus",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "XL",
+      "image": "/zeph-black front.png",
+      "backImage": "/zeph-black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 3,
+      "name": "Zephyrus",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "2XL",
+      "image": "/zeph-black front.png",
+      "backImage": "/zeph-black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 3,
+      "name": "Zephyrus",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "3XL",
+      "image": "/zeph-black front.png",
+      "backImage": "/zeph-black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 3,
+      "name": "Zephyrus",
+      "price": 50000,
+      "color": "Purple",
+      "hex": "#DA70D6",
+      "size": "XL",
+      "image": "/zeph-gray front.png",
+      "backImage": "/zeph-gray back.png",
+      "inventory": 10
+    },
+    {
+      "id": 3,
+      "name": "Zephyrus",
+      "price": 50000,
+      "color": "Purple",
+      "hex": "#DA70D6",
+      "size": "2XL",
+      "image": "/zeph-gray front.png",
+      "backImage": "/zeph-gray back.png",
+      "inventory": 10
+    },
+    {
+      "id": 3,
+      "name": "Zephyrus",
+      "price": 50000,
+      "color": "Purple",
+      "hex": "#DA70D6",
+      "size": "3XL",
+      "image": "/zeph-gray front.png",
+      "backImage": "/zeph-gray back.png",
+      "inventory": 10
+    },
+    {
+      "id": 4,
+      "name": "Nocturnal",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "XL",
+      "image": "/nocturnal black front.png",
+      "backImage": "/nocturnal black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 4,
+      "name": "Nocturnal",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "2XL",
+      "image": "/nocturnal black front.png",
+      "backImage": "/nocturnal black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 4,
+      "name": "Nocturnal",
+      "price": 50000,
+      "color": "Black",
+      "hex": "#000000",
+      "size": "3XL",
+      "image": "/nocturnal black front.png",
+      "backImage": "/nocturnal black back.png",
+      "inventory": 10
+    },
+    {
+      "id": 4,
+      "name": "Nocturnal",
+      "price": 50000,
+      "color": "White",
+      "hex": "#fff",
+      "size": "XL",
+      "image": "/nocturnal white.png",
+      "backImage": "/nocturnal-white back.png",
+      "inventory": 10
+    },
+    {
+      "id": 4,
+      "name": "Nocturnal",
+      "price": 50000,
+      "color": "White",
+      "hex": "#fff",
+      "size": "2XL",
+      "image": "/nocturnal white.png",
+      "backImage": "/nocturnal-white back.png",
+      "inventory": 10
+    },
+    {
+      "id": 4,
+      "name": "Nocturnal",
+      "price": 50000,
+      "color": "White",
+      "hex": "#fff",
+      "size": "3XL",
+      "image": "/nocturnal white.png",
+      "backImage": "/nocturnal-white back.png",
+      "inventory": 10
+    }
+  ]
+  
+export default shirts;

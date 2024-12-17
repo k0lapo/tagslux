@@ -29,6 +29,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8 items-center">
           <Link to="/" className="text-gray-800 font-bold">Home</Link>
           <Link to="/product" className="text-gray-800 font-bold">Our Store</Link>
+          <Link to="/new-arrivals" className="text-gray-800 font-bold">New Arrivals</Link>
           <Link to="/about" className="text-gray-800 font-bold">About</Link>
           <Link to="/cart" className="relative text-gray-800 font-bold">
             <FaShoppingCart />
@@ -58,6 +59,7 @@ const Navbar = () => {
         <div className="flex flex-col items-center mb-32 space-y-5 w-full">
           <Link to="/" onClick={closeMenu} className="block py-2 text-black text-xl hover:text-gray-700 font-bold">Home</Link>
           <Link to="/product" onClick={closeMenu} className="block py-2 text-black text-xl hover:text-gray-700 font-bold">Our Store</Link>
+          <Link to="/" onClick={closeMenu} className="block py-2 text-black text-xl hover:text-gray-700 font-bold">New Arrivals</Link>
           <Link to="/about" onClick={closeMenu} className="block py-2 text-black text-xl hover:text-gray-700 font-bold">About</Link>
           <div className="flex space-x-6 mt-6">
             <Link to="/cart" onClick={closeMenu} className="relative block py-2 text-black text-xl hover:text-gray-700 font-bold">
