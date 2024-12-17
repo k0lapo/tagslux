@@ -1,4 +1,3 @@
-// src/App.jsx
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -20,6 +19,8 @@ import ContactUs from './context/ContactUs';
 import LayoutTwo from './context/LayoutTwo';
 import UserProfile from './components/UserProfile';
 import { UserProfileProvider } from './context/UserProfileContext';
+import NewArrivals from './components/NewArrivals';
+import NewProductDetail from './components/NewProductDetail';
 
 function App() {
   return (
@@ -30,20 +31,13 @@ function App() {
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route
-                  path="product"
-                  element={
-                    <div className="flex flex-wrap justify-center">
-                      {products.map((product) => (
-                        <ProductCard key={product.id} product={product} />
-                      ))}
-                    </div>
-                  }
-                />
+                <Route path="product" element={<ProductList />} />
                 <Route path="product/:id" element={<ProductDetail />} />
                 <Route path="about" element={<About />} />
                 <Route path="cart" element={<Cart />} />
                 <Route path="login" element={<Login />} />
+                <Route path="new-arrivals" element={<NewArrivals />} />
+                <Route path="new-arrivals/:id" element={<NewProductDetail />} />
                 <Route path="checkout" element={<Checkout />} />
                 <Route path="shipping-policy" element={<ShippingPolicy />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
@@ -57,6 +51,16 @@ function App() {
         </Router>
       </UserProfileProvider>
     </CartProvider>
+  );
+}
+
+function ProductList() {
+  return (
+    <div className="flex flex-wrap justify-center">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </div>
   );
 }
 

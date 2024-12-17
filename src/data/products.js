@@ -92,68 +92,100 @@ const products = [
     about:
       'Zephyrus, the gentle west wind, embodies renewal and tranquility. It carries the promise of new beginnings and the soothing whisper of nature’s breath. Wearing "Zephyrus" signifies embracing the serene power of the wind, a reminder of nature’s gentle touch and the endless possibilities that come with each new day.',
   },
-  // {
-  //   id: 4,
-  //   name: 'Nocturnal',
-  //   price: '50,000',
-  //   image: '/nocturnal black front.png',
-  //   backImage: '/nocturnal black back.png',
-  //   sizes: ['XL', '2XL', '3XL'],
-  //   colors: [
-  //     {
-  //       name: 'Black',
-  //       hex: '#000000',
-  //       image: '/nocturnal black front.png',
-  //       backImage: '/nocturnal black back.png',
-  //     },
-  //     {
-  //       name: 'White',
-  //       hex: '#fff',
-  //       image: '/nocturnal white.png',
-  //       backImage: '/nocturnal-white back.png',
-  //     },
-  //     {
-  //       name: 'Army Green',
-  //       hex: '#49501F',
-  //       image: '/noc-army front.png',
-  //       backImage: '/noc-armygreen.png',
-  //     },
-  //   ],
-  //   inventory: 60,
-  //   about:
-  //     'Nocturnal embodies the mystery and allure of the night. It symbolizes the beauty found in darkness and the quiet strength that emerges under the stars. Wearing "Nocturnal" means embracing the elegance and enigma of the night. It’s a reminder that even in the darkest moments, there is beauty and light.',
-  // },
-  // {
-  //   id: 5,
-  //   name: 'Picante',
-  //   price: '50,000',
-  //   image: '/pic-black front.png',
-  //   backImage: '/pic-black back.png',
-  //   sizes: ['XL', '2XL', '3XL'],
-  //   colors: [
-  //     {
-  //       name: 'Black',
-  //       hex: '#000',
-  //       image: '/pic-black front.png',
-  //       backImage: '/pic-black back.png',
-  //     },
-  //     {
-  //       name: 'White',
-  //       hex: '#fff',
-  //       image: '/pic-white front.png',
-  //       backImage: '/pic-white back.png',
-  //     },
-  //     {
-  //       name: 'Army Green',
-  //       hex: '#49501F',
-  //       image: '/pic-green front.png',
-  //       backImage: '/pic-green back.png',
-  //     },
-  //   ],
-  //   inventory: 60,
-  //   about:
-  //     'Wearing "Picante" means embracing a vibrant spirit and a zestful attitude. It’s a reminder to savor every moment with intensity and to spice up life with enthusiasm. Let Picante inspire you to add a dash of excitement to your journey, celebrating the rich flavors and bold choices that make life deliciously memorable.',
-  // },
+  {
+    id: 4,
+    name: 'Nocturnal',
+    price: '50,000',
+    image: '/nocturnal black front.png',
+    backImage: '/nocturnal black back.png',
+    sizes: ['XL', '2XL', '3XL'],
+    colors: [
+      {
+        name: 'Black',
+        hex: '#000000',
+        image: '/nocturnal black front.png',
+        backImage: '/nocturnal black back.png',
+      },
+      {
+        name: 'White',
+        hex: '#fff',
+        image: '/nocturnal white.png',
+        backImage: '/nocturnal-white back.png',
+      },
+      {
+        name: 'Army Green',
+        hex: '#49501F',
+        image: '/noc-army front.png',
+        backImage: '/noc-armygreen.png',
+      },
+    ],
+    inventory: 60,
+    about:
+      'Nocturnal embodies the mystery and allure of the night. It symbolizes the beauty found in darkness and the quiet strength that emerges under the stars. Wearing "Nocturnal" means embracing the elegance and enigma of the night. It’s a reminder that even in the darkest moments, there is beauty and light.',
+  },
+  {
+    id: 5,
+    name: 'Picante',
+    price: '50,000',
+    image: '/pic-black front.png',
+    backImage: '/pic-black back.png',
+    sizes: ['XL', '2XL', '3XL'],
+    colors: [
+      {
+        name: 'Black',
+        hex: '#000',
+        image: '/pic-black front.png',
+        backImage: '/pic-black back.png',
+      },
+      {
+        name: 'White',
+        hex: '#fff',
+        image: '/pic-white front.png',
+        backImage: '/pic-white back.png',
+      },
+      {
+        name: 'Army Green',
+        hex: '#49501F',
+        image: '/pic-green front.png',
+        backImage: '/pic-green back.png',
+      },
+    ],
+    inventory: 60,
+    about:
+      'Wearing "Picante" means embracing a vibrant spirit and a zestful attitude. It’s a reminder to savor every moment with intensity and to spice up life with enthusiasm. Let Picante inspire you to add a dash of excitement to your journey, celebrating the rich flavors and bold choices that make life deliciously memorable.',
+  },
+  {
+    id: 6,
+    name: 'Icon By Tagslux',
+    price: '99,000',
+    image: '/iconfront.png',
+    backImage: '/iconback.jpg',
+    sizes: ['XL', '2XL', '3XL'],
+    colors: 'Black',
+    hex: '#000',
+    about: ' ',
+  },
+  {
+    id: 7,
+    name: 'Native Crop Shirt',
+    price: '99,000',
+    image: '/wash tee.png',
+    sizes: ['XL', '2XL', '3XL'],
+    colors: 'Washed Black',
+    hex: '#000',
+    about: ' ',
+  },
+  {
+    id: 8,
+    name: 'Native Crop Shirt',
+    price: '99,000',
+    image: '/popstar.png',
+    backImage: '/popstar back.png',
+    sizes: ['XL', '2XL', '3XL'],
+    colors: 'White',
+    hex: '#fff',
+    about: ' ',
+  },
 ];
 
 export default products;
