@@ -41,26 +41,22 @@ const Home = () => {
   }
 
   // Display only the first 5 products
-  const displayedProducts = products.slice(0, 5);
+  const displayedProducts = products.slice(3, 8);
 
   return (
     <div className='bg-gray-100'>
       {isModalOpen && <SubscriptionModal onClose={() => setIsModalOpen(false)} />}
       <SingleVideo />
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center">
-          {loading ? (
-            // Display loading skeletons for the products
-            Array.from({ length: 5 }).map((_, index) => (
-              <LoadingSkeleton key={index} />
-            ))
-          ) : (
-            // Render the actual products
-            displayedProducts.map(product => (
-              <Product key={product.id} product={product} />
-            ))
-          )}
-        </div>
+      <h2 className="text-2xl font-bold text-center my-4">New Arrivals</h2>
+      <div className="flex flex-wrap justify-center">
+  {loading ? (
+    Array.from({ length: 5 }).map((_, index) => <LoadingSkeleton key={index} />)
+  ) : (
+    displayedProducts.map((product) => <Product key={product.id} product={product} />)
+  )}
+</div>
+
         <HeroImage />
         <ImageGallery />
       </div>
