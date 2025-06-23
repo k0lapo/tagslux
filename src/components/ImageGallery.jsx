@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const ImageGallery = () => {
-  const placeholderImages = [
-    '/ric.png',
-    '/vick.png',
-  ];
+  const placeholderImages = ['/ric.png', '/vick.png'];
 
   return (
     <div>
@@ -17,7 +14,7 @@ const ImageGallery = () => {
                 alt={`Placeholder ${index + 1}`}
                 className="w-full h-auto object-cover shadow-md"
               />
-              <Link to="/product">
+              <Link to="/new-arrivals">
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
                   <p className="text-white hover:text-black text-sm underline">
                     Explore Now

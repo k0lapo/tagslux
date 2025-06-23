@@ -11,12 +11,15 @@ const HeroImage = () => {
       />
       <div className="absolute bottom-4 right-4 left-4 text-white uppercase text-center md:text-right">
         <p className=" text-xs font-semibold">
-          The New Collection Is A Bold And<br />
-          Evocative Lineup Of Designs.
+          Every Print is A Riot
+          <br />
+          Every Stitch is A Story
+          <br />
+          Fela Lives on Every Inch
         </p>
-        <Link to="/product">
+        <Link to="/new-arrivals">
           <p className="text-xs underline hover:text-black mt-2">
-            Explore Our New Collection
+            Explore Our Capsule Collection
           </p>
         </Link>
       </div>

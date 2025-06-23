@@ -9,17 +9,17 @@ const NewProduct = ({ product }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 inline-block transform hover:scale-105 transition-transform duration-300">
       <Link to={`/product/${product.id}`}>
-        <div className="relative w-full h-80">
+        <div className="relative w-full h-64 overflow-hidden bg-gray-100">
           <img
-            className="w-full h-full object-cover transition-opacity duration-300 front-image"
             src={product.image}
             alt={product.name}
+            className="w-full h-full object-cover transition-opacity duration-300"
           />
-          {product.backImage && product.backImage.trim() && (
+          {product.backImage && (
             <img
-              className="w-full h-full object-cover transition-opacity duration-300 absolute top-0 left-0 back-image opacity-0 hover:opacity-100"
               src={product.backImage}
               alt={`Back of ${product.name}`}
+              className="absolute top-0 left-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300"
             />
           )}
         </div>
@@ -28,7 +28,7 @@ const NewProduct = ({ product }) => {
         <div className="font-bold text-xl mb-2">{product.name}</div>
         {/* Directly display price in dollars */}
         <p className="text-gray-700 text-base">
-          ${((product.price / 1650) || 0).toFixed(2)}
+          ₦{(parseFloat(product.price) * 1000).toLocaleString()}
         </p>
       </div>
       <div className="px-6 py-4 text-center">

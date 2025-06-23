@@ -157,7 +157,7 @@ const products = [
   {
     id: 6,
     name: 'Icon By Tagslux',
-    price: '99,000',
+    price: '55,000',
     image: '/iconfront.png',
     backImage: '/iconback.jpg',
     sizes: ['XL', '2XL', '3XL'],
@@ -168,7 +168,7 @@ const products = [
   {
     id: 7,
     name: 'Native Crop Shirt',
-    price: '99,000',
+    price: '55,000',
     image: '/wash tee.png',
     sizes: ['XL', '2XL', '3XL'],
     colors: 'Washed Black',
@@ -178,7 +178,7 @@ const products = [
   {
     id: 8,
     name: 'Native Crop Shirt',
-    price: '99,000',
+    price: '55,000',
     image: '/popstar.png',
     backImage: '/popstar back.png',
     sizes: ['XL', '2XL', '3XL'],

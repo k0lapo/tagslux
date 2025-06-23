@@ -2,7 +2,7 @@ const fela = [
   {
     id: 1,
     name: 'Icon By Tagslux',
-    price: 99000,
+    price: 50000,
     color: 'Black',
     hex: '#000000',
     size: 'XL',
@@ -13,7 +13,7 @@ const fela = [
   {
     id: 2,
     name: 'Native Crop Shirt',
-    price: 99000,
+    price: 50000,
     color: 'Washed Black',
     hex: '#000000',
     size: 'XL',
@@ -24,7 +24,7 @@ const fela = [
   {
     id: 3,
     name: 'Fela Popstar',
-    price: 99000,
+    price: 50000,
     color: 'White',
     hex: '#fff',
     size: 'XL',

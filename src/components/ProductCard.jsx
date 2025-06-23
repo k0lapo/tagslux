@@ -38,9 +38,13 @@ const ProductCard = ({ product }) => {
       </Link>
       <div className="px-6 py-4 bg-white text-center">
         <div className="font-bold text-xl mb-2">{product.name}</div>
-        <p className="text-gray-700 text-base">&#8358; {product.price}</p>
+        <p className="text-gray-700 text-base">
+          ₦{(parseFloat(product.price) * 1000).toLocaleString()}
+        </p>
       </div>
-      <div className="px-6 py-4 text-center"> {/* Use text-center class to center align content */}
+      <div className="px-6 py-4 text-center">
+        {' '}
+        {/* Use text-center class to center align content */}
         <Link to={`/product/${product.id}`}>
           <button
             className="bg-green-700 hover:bg-black text-white font-bold py-2 px-4 rounded"
@@ -50,7 +54,6 @@ const ProductCard = ({ product }) => {
           </button>
         </Link>
       </div>
-
     </div>
   );
 };

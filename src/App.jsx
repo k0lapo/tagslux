@@ -2,12 +2,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import ProductCard from './components/ProductCard';
+// import ProductCards from './components/ProductCards';
 import ProductDetail from './components/ProductDetail';
 import About from './components/About';
 import Cart from './components/Cart';
 import Login from './components/Login';
-import products from './data/products';
 import { CartProvider } from './context/CartContext';
 import Layout from './components/Layout';
 import Checkout from './components/Checkout';
@@ -21,6 +20,7 @@ import UserProfile from './components/UserProfile';
 import { UserProfileProvider } from './context/UserProfileContext';
 import NewArrivals from './components/NewArrivals';
 import NewProductDetail from './components/NewProductDetail';
+import ProductList from './components/ProductList'; // ✅ Use the proper component now
 
 function App() {
   return (
@@ -31,7 +31,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path="product" element={<ProductList />} />
+                <Route path="product" element={<ProductList />} />{' '}
+                {/* ✅ Now shows full product list */}
                 <Route path="product/:id" element={<ProductDetail />} />
                 <Route path="about" element={<About />} />
                 <Route path="cart" element={<Cart />} />
@@ -51,16 +52,6 @@ function App() {
         </Router>
       </UserProfileProvider>
     </CartProvider>
-  );
-}
-
-function ProductList() {
-  return (
-    <div className="flex flex-wrap justify-center">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </div>
   );
 }
 
