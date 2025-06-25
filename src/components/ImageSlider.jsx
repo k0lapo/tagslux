@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const ImageSlider = () => {
-  const videoSrc = '/street.mp4'; // Replace with the path to your video file
+  const videoSrc = '/fela.mp4'; // Replace with the path to your video file
 
   return (
     <div className="relative w-full  h-screen">
