@@ -22,13 +22,13 @@ const ImageSlider = () => {
             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
           ></div>
           <div
-            className="font-bold text-4xl md:text-4xl"
+            className="font-bold text-gray-300 text-4xl md:text-4xl"
             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
           >
             ICON BY TAGSLUX
           </div>
           <div
-            className="font-normal text-lg md:text-2xl"
+            className="font-normal text-gray-300 text-lg md:text-2xl"
             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
           >
             CAPSULE &apos;25
@@ -37,7 +37,7 @@ const ImageSlider = () => {
       </div>
 
       <div className="absolute bottom-10 w-full flex justify-center">
-        <div className="text-white pt-8 underline hover:text-gray-500">
+        <div className="text-gray-400 pt-8 underline hover:text-white">
           <Link to="/new-arrivals">EXPLORE OUR CAPSULE COLLECTION</Link>
         </div>
       </div>

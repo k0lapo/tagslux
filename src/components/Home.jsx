@@ -3,7 +3,7 @@ import ProductCards from './ProductCards';
 import SingleVideo from './ImageSlider';
 import SubscriptionModal from './SubscriptionModal';
 import ImageGallery from './ImageGallery';
-import HeroImage from './HeroImage';
+// import HeroImage from './HeroImage';
 import LoadingSkeleton from './LoadingSkeleton';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -41,7 +41,7 @@ const Home = () => {
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-[#f5f3ef]">
       {isModalOpen && (
         <SubscriptionModal onClose={() => setIsModalOpen(false)} />
       )}
@@ -85,7 +85,7 @@ const Home = () => {
           </Swiper>
         )}
 
-        <HeroImage />
+        {/* <HeroImage /> */}
         <ImageGallery />
       </div>
     </div>
