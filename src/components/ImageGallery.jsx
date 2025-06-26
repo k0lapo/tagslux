@@ -16,7 +16,7 @@ const ImageGallery = () => {
               />
               <Link to="/new-arrivals">
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <p className="text-gray-300 hover:text-gray-white text-sm underline">
+                  <p className="text-gray-300 hover:text-white text-sm underline">
                     Explore Now
                   </p>
                 </div>
