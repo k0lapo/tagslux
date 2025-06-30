@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
           </h2>
           <p className="text-center text-base text-gray-600 font-medium">
             ₦{(parseInt(product.price) * 1000).toLocaleString()}
-            <span className="text-xs text-red-500 block">Presale Price</span>
+            {/* <span className="text-xs text-red-500 block">Presale Price</span> */}
           </p>
         </div>
       </Link>
