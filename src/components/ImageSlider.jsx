@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 
 const ImageSlider = () => {
-  const videoSrc = '/fela.mp4'; // Replace with the path to your video file
+  const videoSrc =
+    'https://res.cloudinary.com/ddlhofrln/video/upload/v1751314429/fela1_pig21e.mp4'; // Replace with the path to your video file
 
   return (
     <div className="relative w-full  h-screen">
@@ -9,6 +10,7 @@ const ImageSlider = () => {
         autoPlay
         loop
         muted
+        playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source src={videoSrc} type="video/mp4" />

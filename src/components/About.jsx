@@ -9,7 +9,7 @@ const About = () => {
         {/* Section 1 */}
         <div className="grid md:grid-cols-2 gap-10 mb-16 items-center">
           <img
-            src="/shades.jpg"
+            src="/shades.webp"
             alt="Our Story"
             className="w-full max-w-full h-auto object-cover"
           />
@@ -28,7 +28,7 @@ const About = () => {
         {/* Section 2 */}
         <div className="grid md:grid-cols-2 gap-10 mb-16 items-center">
           <img
-            src="/gt25.jpg"
+            src="/gt25.webp"
             alt="Collection"
             className="w-full max-w-full h-auto object-cover md:order-2"
           />
@@ -46,7 +46,7 @@ const About = () => {
         {/* Section 3 */}
         <div className="grid md:grid-cols-2 gap-10 mb-10 items-center">
           <img
-            src="/luv.jpg"
+            src="/felaback.webp"
             alt="Vision"
             className="w-full max-w-full h-auto object-cover"
           />

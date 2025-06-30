@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const ImageGallery = () => {
-  const placeholderImages = ['/popstar.jpg', '/sickk.jpg'];
+  const placeholderImages = ['/popstar.webp', '/sickk.webp'];
 
   return (
     <div>
